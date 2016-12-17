@@ -1,30 +1,72 @@
+// ==================================================
+// Variables
+//
+// 1. Colors
+// 2. Spaces
+// 3. Media Queries
+// 4. Typography
+// 5. Grids
+// 6. zIndex
+// ==================================================
 
+// --------------------------------------------------
+// 1. Colors
+// --------------------------------------------------
+
+/*!---
+title:   Colors
+section: Core
+---
+
+###### Grays
+
+```example:color
+@color: #111 @name: Gray Darker
+@color: #333 @name: Gray Dark
+@color: #666 @name: Gray
+@color: #aaa @name: Gray Light
+@color: #ddd @name: Gray Lighter
+@color: #f0f0f0 @name: Gray White
+```
+
+###### Pallets
+
+```example:color
+@color: #eade00 @name: Yellow
+@color: #3b78e7 @name: Blue
+@color: #cc0000 @name: Red
+@color: #afcc49 @name: Green
+```
+
+*/
+
+
+//
 // Grays
 // --------------------------------------------------
 
 $gray-darker  = #111
 $gray-dark    = #333
 $gray         = #666
-$gray-light   = #ebebeb
+$gray-light   = #aaa
 $gray-lighter = #ddd
 $gray-white   = #f0f0f0
-$white        = #fff
-$black        = #000
 
-
+//
 // Pallets
 // --------------------------------------------------
 
+$white       = #fff
 $yellow      = #eade00
 $blue        = #3b78e7
 $red         = #cc0000
 $green       = #afcc49
 
-
+//
 // Brands
 // --------------------------------------------------
 
-$text-color      = $gray-darker
+$brand-text      = $gray-darker
 $brand-primary   = $blue
 $brand-success   = $green
 $brand-info      = $blue
@@ -32,25 +74,7 @@ $brand-warning   = $yellow
 $brand-danger    = $red
 
 
-///
-///  Elements
-///
-
-$navbar-color = #111
-
-///
-//  Backgrounds Colors
-//
-$bg-light-green = #95d063
-$bg-green       = #19b45a
-$bg-dark-green  = #15984c
-$bg-dark-red    = #d45343
-$bg-red         = #f6614f
-$bg-orange      = #fc9836
-$bg-yellow      = #ffcb48
-$bg-light-gray  = #ebebeb!important
-
-//
+// --------------------------------------------------
 // 2. Spaces
 // --------------------------------------------------
 
@@ -64,7 +88,7 @@ $space-xlg     = ($space * 4)         // Extra Large space margin
 $space-gutter  = $space
 
 
-//
+// --------------------------------------------------
 // 3. Media Queries
 // --------------------------------------------------
 
@@ -76,18 +100,39 @@ $screen-xlg  = 1400px // Extra Large screen / wide desktop
 $screen-xxlg = 1900px // Extra Large screen / wide desktop
 
 // Rupture Settings
+// @stylint off
 rupture.mobile-cutoff  = $screen-sm
-rupture.tablet-cutoff  = $screen-md
-rupture.desktop-cutoff = $screen-lg
-rupture.hd-cutoff      = $screen-xlg
+rupture.tablet-cutoff  = $screen-md 
+rupture.desktop-cutoff = $screen-lg 
+rupture.hd-cutoff      = $screen-xlg 
 
 rupture.scale          = 0 $screen-xs $screen-sm $screen-md $screen-lg $screen-xlg $screen-xxlg
 rupture.scale-names    = '0' 'xs' 'sm' 'md' 'lg' 'xlg' 'hd'
 rupture.anti-overlap   = -1px
+// @stylint on
 
 
-//
+// --------------------------------------------------
 // 4. Typography
 // --------------------------------------------------
 
-$text-size = 1.4rem
+$text-size = 2rem
+
+
+// --------------------------------------------------
+// 5. Grids
+// --------------------------------------------------
+
+// @stylint off
+@lost gutter 0
+@lost flexbox flex
+// @stylint on
+
+
+// --------------------------------------------------
+// 6. zIndex
+// --------------------------------------------------
+
+$zindex-bg       = -1
+$zindex-default  = 1 
+$zindex-loading  = 10

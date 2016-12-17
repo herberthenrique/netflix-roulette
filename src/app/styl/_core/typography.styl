@@ -1,12 +1,17 @@
-//
+// ==================================================
 // Typography
 //
+// 1. Family
+// 2. Transform
+// 3. Weight
+// 4. Default
 // ==================================================
 
-// Font Family
+// --------------------------------------------------
+// 1. Font Family
 // --------------------------------------------------
 
-font-family(family)
+$font-family(family)
   if (family == primary)
     font-family 'Open Sans', sans-serif
 
@@ -14,93 +19,83 @@ font-family(family)
     font-family 'Raleway', sans-serif
 
 
-// Transform
+// --------------------------------------------------
+// 2. Transform
 // --------------------------------------------------
 
-font-transform(transform)
+$font-transform(transform)
   if (transform == uppercase)
-    text-transform uppercase
     letter-spacing .1rem
+    text-transform uppercase
 
   if (transform == lowercase)
-    text-transform lowercase
     letter-spacing .1rem
+    text-transform lowercase
 
 
-// Uppercase
+// --------------------------------------------------
+// 3. Weight
 // --------------------------------------------------
 
+$font-weight(arg = '')
+  if (arg == bold)
+    font-weight 700
+
+  if (arg == regular)
+    font-weight 400
+
+  if (arg == light)
+    font-weight 200
+    
+  if (arg == thin)
+    font-weight 100
 
 
-
-// Fonts
+// --------------------------------------------------
+// 4. Default
 // --------------------------------------------------
 
-font(type = '', weight = '', family = '', transform = '')
-
-  // Type
-  // --------------------------------------------------
-
+$font(type = '', weight = '', family = '', transform = '')
+ 
   if (type)
-
-    // Headings
-    // --------------------------------------------------
-
+ 
     if (type == h1)
-      font-size 5rem
-      line-height 6rem
+      font-size 4rem
+      line-height 5rem
 
     if (type == h2)
-      font-size 3.6rem
-      line-height 4.8rem
+      font-size 3rem
+      line-height 4rem
 
     if (type == h3)
-      font-size 2.8rem
-      line-height 3.6rem
+      font-size 2.6rem
+      line-height 3.3rem
 
     if (type == h4)
       font-size 2.2rem
       line-height 3rem
 
     if (type == h5)
-      font-size 1.8rem
+      font-size $text-size
       line-height 2.4rem
 
     if (type == h6)
       font-size 1.2rem
       line-height 1.8rem
-
-    // Paragraphs
-    // --------------------------------------------------
-
+ 
     if (type == p1)
       font-size $text-size
       line-height 2.8rem
 
     if (type == p2)
-      font-size 1.6rem
-      line-height 2.4rem
-
-
-  // Weights
-  // --------------------------------------------------
-
-  if (weight)
-
-      font-weight(weight)
-
-
-  // Font Secondary
-  // --------------------------------------------------
-
-  if (family)
-
-      font-family(family)
-
-
-  // Transform
-  // --------------------------------------------------
-
-  if (transform)
-
-      font-transform(transform)
+      font-size 1.2rem
+      line-height 1.8rem
+ 
+  if (weight) 
+    $font-weight(weight)
+ 
+  if (family) 
+    $font-family(family)
+ 
+  if (transform) 
+    $font-transform(transform)
