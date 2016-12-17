@@ -1,0 +1,23 @@
+<div class="search-control">
+  <div class="search">
+    <input type="search" class="search__field" placeholder="Search some movie" ng-model="vm.title">
+    <button class="search__button" ng-click="vm.search()">Search!</button>
+  </div>
+  <div class="search-result" ng-show="vm.result">
+    <div class="movie-box">
+      <div class="movie-box__image movie-box__half">
+        <img src="{{vm.result.poster}}" alt="{{vm.result.show_title}}">
+      </div>
+      <div class="movie-box__info movie-box__half">
+        <h2 class="movie-box__info__title">{{vm.result.show_title}}</h2>
+        <div class="movie-boxe__info__year"><strong>Year:</strong> {{vm.result.release_year}}</div>
+        <div class="movie-boxe__info__rating"><strong>Rating:</strong> {{vm.result.rating}}</div>
+
+        <div class="movie-boxe__info__director"><strong>Director:</strong> {{vm.result.director}}</div>
+        <div class="movie-boxe__info__cast"><strong>Cast:</strong> {{vm.result.show_cast}}</div>
+        <div class="movie-boxe__info__genre"><strong>Genre:</strong> {{vm.result.category}}</div>
+        <div class="movie-boxe__info__summary"><strong>Summary:</strong> {{vm.result.summary}}</div>
+      </div>
+    </div>
+  </div>
+</div>
