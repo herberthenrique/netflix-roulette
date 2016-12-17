@@ -1,0 +1,62 @@
+//
+// Scaffolding
+//
+// ==================================================
+
+*
+  box-sizing border-box
+
+  &:before,
+  &:after
+    box-sizing border-box
+
+
+html
+  font-size 10px
+ /* font-size responsive 8px 10px*/
+
+
+body
+  font-family(primary)
+  color $text-color
+  font-size $text-size
+  overflow-x hidden
+
+
+.error-message
+  color red
+  font-size 12px
+
+
+.img-centered
+  margin: 0 auto;
+
+section
+  padding: 0 0 0 0;
+  .container
+    background #fff
+    padding-bottom: 15px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family 'Open Sans', sans-serif
+  font-weight(light)
+  font-size 3.6rem
+
+
+  +below($screen-sm)
+    /*padding: 75px 0;*/
+
+.clear
+  clear: both;
+
+textarea
+  resize: none;
+  color: #fff
+
+.spacing20
+  height 20px

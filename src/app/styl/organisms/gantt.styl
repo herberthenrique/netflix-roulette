@@ -1,0 +1,173 @@
+/* GANTT */
+
+.k-grid-content
+  &:nth-child(3)
+    height 145px
+
+.k-widget
+  &.k-gantt
+    border none
+
+.k-gantt-layout
+  &.k-gantt-treelist
+    .k-grid-content
+      tr
+        border-bottom 1px solid #e4e4e4
+
+.k-task-single
+  border-color #81c2f8
+  background #81c2f8 0 -257px none repeat-x
+
+.k-task-complete
+  background-color #cde6f7
+  border-color #cde6f7
+
+.k-task-milestone,
+.k-task-summary-complete
+  background #d1d1d1
+  border-color #d1d1d1
+
+.gantt-footer
+  text-align right
+  padding-top 25px
+
+.gantt-footer
+  .k-button.k-grid-cancel
+    border 1px solid #ccc
+
+.k-gantt-actions
+  .k-button
+    visibility hidden
+
+/* Periodo */
+input[type="radio"]:checked
+  & + label
+    border-bottom 2px solid #005672
+    color #005672
+
+.range-choose
+  float right
+  margin-right 10px
+  label
+    padding 0 4px
+    margin 0 4px
+    font-weight normal
+    cursor pointer
+    color #888
+
+.gantt-row-even
+  & > .gantt-row-background
+    background initial
+
+.gantt-side
+  width 50%
+
+.gantt-side-content
+  border 1px solid #eaeaea
+
+.gantt-side-header-row
+  height 84px
+
+.gantt-row-label-header
+  color #00688a
+
+.gantt-valign-content
+  a
+    margin-left 10px
+
+/* Textos */
+.gantt-side-background-body
+  height 500px!important
+
+.gantt-valign-content
+  a
+    color #333
+
+
+.gantt-task-content
+  color #333
+
+.gantt-label-text
+  color #888
+
+.gantt-tree-body
+  .gantt-label-text
+    color #29aae1
+
+.gantt-table-header, .gantt-tree-header
+  .gantt-label-text
+    color #00688a
+    font-weight bold
+
+.button-gantt
+  overflow hidden
+  text-indent -9999px
+  display inline-block
+  width 16px
+  position relative
+  top 5px
+  height 16px
+
+.button-gantt
+  &.button-add
+    background-image url(../assets/images/sprite.png)
+    background-position -32px -64px
+
+.button-gantt
+  &.button-edit
+    background-image url(../assets/images/sprite.png)
+    background-position -32px 0px
+
+.button-gantt
+  &.button-delete
+    background-image url(../assets/images/sprite.png)
+    background-position -32px -16px
+
+.gantt-tree-handle-button[disabled]
+    visibility: hidden;
+
+.gantt-task-background
+  background-color #81C2F8
+
+/* Meio */
+.gantt-resizer-display
+  margin-left auto
+  margin-right auto
+  width 6px
+  background-color #eaeaea
+  background-image none
+  background-image none
+  background-size 2px 2px
+  height 100%
+
+
+.gantt-foreground-col,
+.gantt-foreground-col-nonworkhour,
+.gantt-foreground-col-current-date
+  border none
+
+
+.gantt-scrollable
+  overflow-x auto
+  margin-right 17px
+
+.gantt-task-group
+  background #d1d1d1
+
+.gantt-task-group-left-main
+  background #d1d1d1
+
+.gantt-task-group-left-symbol
+  border-top 12px solid #d1d1d1
+
+.gantt-column-duration,
+.gantt-column-progress,
+.gantt-column-resource
+  min-width 80px
+
+.gantt-task-progress
+  position absolute
+  overflow hidden
+  bottom 0px
+  height 6px
+  border-radius 2px
