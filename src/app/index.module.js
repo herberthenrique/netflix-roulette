@@ -4,8 +4,9 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
-import { SearchDirective } from '../app/components/search-movie/search-movie.directive';
-import { NavbarDirective } from '../app/components/navbar/navbar.directive';
+import { SearchDirective } from './components/search-movie/search-movie.directive';
+import { NavbarDirective } from './components/navbar/navbar.directive';
+import { AccountController } from './account/account.controller'
 import NetflixService from '../app/components/netflix-roulette/netflix.service';
 
 angular.module('netflixRoulette', ['ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'toastr'])
@@ -18,3 +19,4 @@ angular.module('netflixRoulette', ['ngCookies', 'ngTouch', 'ngSanitize', 'ngMess
   .directive('searchMovie', SearchDirective)
   .directive('navbar', NavbarDirective)
   .controller('MainController', MainController)
+  .controller('AccountController', AccountController)
