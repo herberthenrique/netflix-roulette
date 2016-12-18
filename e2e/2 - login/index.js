@@ -5,4 +5,11 @@ describe('Login Page', function() {
     expect(browser.isVisible('.account-section')).to.equal(true);
   });
 
+  it('should do login', function() {
+    browser.setValue('#login-field-email', 'tony@stark.com')
+    browser.setValue('#login-field-password', '123')
+    browser.click('.sign-in');
+    browser.waitForVisible('.right-navbar', 3000);
+    expect(browser.getText('.right-navbar')).to.equal('Olá Tony Stark | Logout');
+  });
 });

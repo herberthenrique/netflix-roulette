@@ -5,11 +5,11 @@
     <div class="form">
       <div class="form-control">
         <label for="" class="label-control">E-mail</label>
-        <input type="text" class="form-input" ng-model="vm.loginModel.email">
+        <input type="text" class="form-input" id="login-field-email" ng-model="vm.loginModel.email">
       </div>
       <div class="form-control">
         <label for="" class="label-control">Password</label>
-        <input type="password" class="form-input" ng-model="vm.loginModel.password">
+        <input type="password" class="form-input" id="login-field-password"  ng-model="vm.loginModel.password">
       </div>
       <div class="form-action">
         <button class="sign-in form-button" ng-click="vm.login()">Sign In</button>
