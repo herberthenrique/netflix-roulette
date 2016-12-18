@@ -51,7 +51,9 @@ export default class FavoriteService {
   }
 
   isInFavorites(favorite) {
-    this.verifyLogin();
+    if(!this.accountService.isLogged()) {
+      return false;
+    }
     let movies = this.service.get(this.favoritesKey);
     let movieToFind = movies.filter(movie => movie.show_id === favorite.show_id);
     return movieToFind.length;
