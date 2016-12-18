@@ -9,6 +9,8 @@ import { NavbarDirective } from './components/navbar/navbar.directive';
 import { AccountController } from './account/account.controller'
 import NetflixService from './components/netflix-roulette/netflix.service';
 import AccountService from './components/account-service/account.service';
+import FavoriteService from './favorites/favorite.service.js'
+import FavoriteController from './favorites/favorite.controller.js'
 
 angular.module('netflixRoulette', ['ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'toastr', 'LocalStorageModule'])
   .constant('malarkey', malarkey)
@@ -18,7 +20,9 @@ angular.module('netflixRoulette', ['ngCookies', 'ngTouch', 'ngSanitize', 'ngMess
   .run(runBlock)
   .service('netflixService', NetflixService)
   .service('accountService', AccountService)
+  .service('favoriteService', FavoriteService)
   .directive('searchMovie', SearchDirective)
   .directive('navbar', NavbarDirective)
   .controller('MainController', MainController)
   .controller('AccountController', AccountController)
+  .controller('FavoriteController', FavoriteController)

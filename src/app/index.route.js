@@ -12,6 +12,12 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/account/account.html',
       controller: 'AccountController',
       controllerAs: 'vm'
+    })
+    .state('favorite', {
+      url: '/favorites',
+      templateUrl: 'app/favorites/favorite.html',
+      controller: 'FavoriteController',
+      controllerAs: 'vm'
     });
 
   $urlRouterProvider.otherwise('/');

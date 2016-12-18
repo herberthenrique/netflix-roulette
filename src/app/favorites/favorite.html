@@ -1,0 +1,30 @@
+<navbar></navbar>
+<div class="container">
+  <h2>Favorites</h2>
+  <div ng-hide="vm.favorites.length">
+    You don't have favorites
+  </div>
+  <div ng-show="vm.favorites.length">
+    <div ng-repeat="movie in vm.favorites">
+      <div class="search-result">
+        <div class="movie-box">
+          <div class="movie-box__image movie-box__half">
+            <img src="{{movie.poster}}" alt="{{movie.show_title}}">
+          </div>
+          <div class="movie-box__info movie-box__half">
+            <h2 class="movie-box__info__title">{{movie.show_title}}</h2>
+            <div class="movie-boxe__info__year"><strong>Year:</strong> {{movie.release_year}}</div>
+            <div class="movie-boxe__info__rating"><strong>Rating:</strong> {{movie.rating}}</div>
+            <div class="movie-boxe__info__director"><strong>Director:</strong> {{movie.director}}</div>
+            <div class="movie-boxe__info__cast"><strong>Cast:</strong> {{movie.show_cast}}</div>
+            <div class="movie-boxe__info__genre"><strong>Genre:</strong> {{movie.category}}</div>
+            <div class="movie-boxe__info__summary"><strong>Summary:</strong> {{movie.summary}}</div>
+            <div class="movie-boxe__info__summary">
+              <a ng-click="vm.removeFromFavorites(movie)" class="link">Remove from favorites</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

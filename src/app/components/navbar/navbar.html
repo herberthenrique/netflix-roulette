@@ -2,7 +2,7 @@
   <ul>
     <li><a ui-sref="home">Home </a></li>
     <li><a ui-sref="account" ng-hide="main.logged">Login or Register</a></li>
-    <li><a ui-sref="favorites" ng-show="main.logged">Favorites</a></li>
+    <li><a ui-sref="favorite" ng-show="main.logged">Favorites</a></li>
   </ul>
   <div class="right-navbar" ng-show="main.logged">
     Olá {{main.user.name}} | <a class="logout-btn" ng-click="main.logout()">Logout</a>

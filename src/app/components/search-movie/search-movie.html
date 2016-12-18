@@ -17,6 +17,10 @@
         <div class="movie-boxe__info__cast"><strong>Cast:</strong> {{vm.result.show_cast}}</div>
         <div class="movie-boxe__info__genre"><strong>Genre:</strong> {{vm.result.category}}</div>
         <div class="movie-boxe__info__summary"><strong>Summary:</strong> {{vm.result.summary}}</div>
+        <div ng-show="vm.logged" class="movie-boxe__info__summary">
+          <a ng-click="vm.addToFavorites()" ng-show="!vm.isInFavorite" class="link">Add to Favorites</a>
+          <a ng-click="vm.removeFromFavorites()" ng-show="vm.isInFavorite" class="link">Remove from favorites</a>
+        </div>
       </div>
     </div>
   </div>
