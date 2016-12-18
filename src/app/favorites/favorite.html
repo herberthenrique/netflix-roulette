@@ -2,7 +2,8 @@
 <div class="container">
   <h2>Favorites</h2>
   <div ng-hide="vm.favorites.length">
-    You don't have favorites
+    <span class="no-favorites">
+    You don't have favorites</span>
   </div>
   <div ng-show="vm.favorites.length">
     <div ng-repeat="movie in vm.favorites">
@@ -20,7 +21,7 @@
             <div class="movie-boxe__info__genre"><strong>Genre:</strong> {{movie.category}}</div>
             <div class="movie-boxe__info__summary"><strong>Summary:</strong> {{movie.summary}}</div>
             <div class="movie-boxe__info__summary">
-              <a ng-click="vm.removeFromFavorites(movie)" class="link">Remove from favorites</a>
+              <a ng-click="vm.removeFromFavorites(movie)" class="link remove-favorite">Remove from favorites</a>
             </div>
           </div>
         </div>
