@@ -1,7 +1,7 @@
-<div class="search-control">
+<div class="search-control" id="search-control">
   <div class="search">
-    <input type="search" class="search__field" placeholder="Search some movie" ng-model="vm.title">
-    <button class="search__button" ng-click="vm.search()">Search!</button>
+    <input type="search" class="search__field" id="input-search-movie" placeholder="Search some movie" ng-model="vm.title">
+    <button class="search__button" id="btn-search-movie" ng-click="vm.search()">Search!</button>
   </div>
   <div class="search-result" ng-show="vm.result">
     <div class="movie-box">

@@ -5,7 +5,8 @@
     "fs-promise": "^1.0.0"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "e2e": "./node_modules/.bin/chimp chimp.conf.js"
   },
   "devDependencies": {
     "babel-core": "~6.7.4",
@@ -14,6 +15,7 @@
     "browser-sync": "~2.9.11",
     "browser-sync-spa": "~1.0.3",
     "chalk": "~1.1.1",
+    "chimp": "^0.45.1",
     "del": "~2.0.2",
     "eslint-loader": "~1.1.0",
     "eslint-plugin-angular": "~0.12.0",
