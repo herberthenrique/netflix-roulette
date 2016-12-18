@@ -2,8 +2,8 @@ export default class AccountService {
   constructor($http, localStorageService, $resource, $state) {
     'ngInject'
     this.storage = localStorageService;
-    // this.url = 'https://fierce-mountain-93519.herokuapp.com/';
-    this.url = 'http://localhost:9000/';
+    this.url = 'https://fierce-mountain-93519.herokuapp.com/';
+    //this.url = 'http://localhost:9000/';
     this.userKey = 'netflix_roulette-user';
     this.userKeyToken = 'netflix_roulette-token';
     this.http = $http;

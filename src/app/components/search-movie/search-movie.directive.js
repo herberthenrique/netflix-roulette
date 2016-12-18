@@ -12,9 +12,10 @@ export function SearchDirective() {
 }
 
 class SearchController {
-  constructor(netflixService) {
+  constructor(netflixService, toastr) {
     'ngInject';
     this.service = netflixService
+    this.toastr = toastr
     this.activate();
   }
   activate() {
@@ -27,5 +28,8 @@ class SearchController {
       .then(data => {
         this.result = data
       })
+      .catch(() => {
+        this.toastr.warning('I Can\'t find yout movie :(')
+      });
   }
 }
