@@ -5,14 +5,14 @@
     <div class="form">
       <div class="form-control">
         <label for="" class="label-control">E-mail</label>
-        <input type="text" class="form-input">
+        <input type="text" class="form-input" ng-model="vm.loginModel.email">
       </div>
       <div class="form-control">
         <label for="" class="label-control">Password</label>
-        <input type="password" class="form-input">
+        <input type="password" class="form-input" ng-model="vm.loginModel.password">
       </div>
       <div class="form-action">
-        <button class="sign-in form-button">Sign In</button>
+        <button class="sign-in form-button" ng-click="vm.login()">Sign In</button>
       </div>
     </div>
   </div>
@@ -21,22 +21,22 @@
     <div class="form">
       <div class="form-control">
         <label for="" class="label-control">Name</label>
-        <input type="text" class="form-input">
+        <input type="text" class="form-input" ng-model="vm.registerModel.name">
       </div>
       <div class="form-control">
         <label for="" class="label-control">E-mail</label>
-        <input type="email" class="form-input">
+        <input type="email" class="form-input" ng-model="vm.registerModel.email">
       </div>
       <div class="form-control">
         <label for="" class="label-control">Password</label>
-        <input type="password" class="form-input">
+        <input type="password" class="form-input" ng-model="vm.registerModel.password">
       </div>
       <div class="form-control">
         <label for="" class="label-control">Confirm Password</label>
-        <input type="password" class="form-input">
+        <input type="password" class="form-input" ng-model="vm.registerModel.confirmPassword">
       </div>
       <div class="form-action">
-        <button class="register form-button">Sign Up</button>
+        <button class="register form-button" ng-click="vm.createUser()">Sign Up</button>
       </div>
     </div>
   </div>

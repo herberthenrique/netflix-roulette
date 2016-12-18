@@ -5,8 +5,7 @@ export function SearchDirective() {
     restrict: 'E',
     templateUrl: 'app/components/search-movie/search-movie.html',
     controller: SearchController,
-    controllerAs: 'vm',
-    bindToController: true
+    controllerAs: 'vm'
   };
 
   return directive;
